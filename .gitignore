@@ -1,0 +1,14 @@
+# Full datasets are deliberately excluded — this repo stores highlighted extracts only.
+# Keep it under ~100 MB.
+swarmdata/
+*.jsonl.gz
+redacted.jsonl*
+full-wiki-logs/
+full-wiki-logs.zip
+metr-full.txt
+*.mp4
+
+# Never commit credentials
+.hf_key
+*.token
+.env

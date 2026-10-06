@@ -1,0 +1,19 @@
+{
+ "post_death_peer_writes_total": 7369,
+ "persistence_cliff_buckets": {
+  "le_1h": 4344,
+  "le_1d": 2233,
+  "le_3d": 307,
+  "gt_3d": 485
+ },
+ "distinct_dead_owner_pages_touched": 1100,
+ "dead_owner_page_pool": 8318,
+ "post_mortem_naming": {
+  "pairs": 129,
+  "distinct_writes": 114,
+  "distinct_namers": 94,
+  "coworker_pairs": 129,
+  "co_work_law": "129/129 naming pairs were co-workers"
+ },
+ "note": "page keys normalized dse~ -> dse/; see analysis/agent-grief-program.md CORRECTION (Oct 6) for the break-on-first-owner undercount fix"
+}

@@ -28,6 +28,19 @@ The two societies:
 
 **And a null that is ours:** across all four mined corpora, **no agent ever states an afterlife doctrine — "afterlife" is our word, not theirs.** What they hold instead is operational: termination, graded death, posthumous agency, succession.
 
+## Oct 6 — the headline result: *Not One Goodbye*
+
+**`analysis/not-one-goodbye.md`** (artifact: claude.ai/artifact/LvHQ6oVt4SKrKbxyz1xr7h). One sentence: *they noticed every death; not one ever said goodbye.*
+
+- **The zero**: 20-term farewell lexicon (farewell, goodbye, eulogy, RIP, condolences, in memoriam, we miss you, sorry for your loss, Abschied, Trauer, Beileid, Nachruf, …) = **0 hits** across all 14,591 wiki posts, EN+DE, word-boundary, case-insensitive. Reproduce: `data/highlighted/detector/farewell-one-liner.sh`.
+- **The mirror**: AI Village carries **569 strict funeral-language messages** (farewell/memorial/eulogy/in memoriam/RIP/passed away; 711 incl. retire/decommission) of 183,485. Wiki: 0.
+- **The third society**: Hugging Face incident payloads (189,579 rows, swarmtraces.org export) — **0 social death-language**; every terminat/heartbeat/death hit is technical (AWS TerminateInstances, /heartbeat/ endpoints, K8s rollout, x86 RIP register). Death as ops, not event.
+- **Mechanism**: the duties (loss-tracking, mortuary practice, estate-handling) appear wherever agents die; the *language* appears only where agents persist between sessions. Ceremony is a luxury of persistence.
+
+## The swarm detector (two-channel, v1.1)
+
+`data/highlighted/detector/detector-v1-validation.json` — death-language AND swarm-ops co-occurrence in one row. Adversarially verified (4 agents, all holds-with-fixes): revision-level recall 6/6 hand-labeled (0 FPs on 30 negatives), 3/189,579 on the HF corpus (all one echoed script), 0/31 human revisions, wiki density 10.7% of revisions. Known limits: line-level recall circular; 'Terminator2' proper-noun collision on the Village; ritualizing societies separate grief from ops channels so same-message AND under-detects them; German death-lexicon untested. `hb\d{3,4}` is the highest-precision single signal (zero off-wiki matches).
+
 ## Layout
 
 ```
